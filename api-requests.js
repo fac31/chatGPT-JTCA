@@ -1,10 +1,12 @@
 const API_URL = "https://api.openai.com/v1/chat/completions";
 let API_KEY = "";
+let callBack = "";
 export function fetchKey(userInput){
     fetch("./config.json")
         .then((response) => response.json())
         .then((data) => API_KEY = data.OPEN_AI_KEY)
-        .then(() => callApi(userInput))
+        .then(() => {callBack = callApi(userInput)})
+        .then(() => {return callBack})
         .catch((e) => console.log('error ', e));
 }
 
@@ -33,5 +35,7 @@ function callApi(userInput){
         }
         return response.json();
     })
+    .then((data) => {return data})
     .catch((error) => console.log('Error making api request: ', error ));
 }
+console.log(fetchKey("Tell me about yourself"));
