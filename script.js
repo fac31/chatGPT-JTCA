@@ -10,16 +10,19 @@ function fetchConfig(){
 }
 
 function callApi(){
-    console.log();
+    const requestBody = {
+        model: "gpt-3.5-turbo",
+        prompt: "Enter your prompt here",
+        max_tokens: 50
+    }
     fetch(API_URL,{   
         method: "POST",
+        
         headers: {
             Authorization: `Bearer ${API_KEY}`,
             'content-type': 'application/json',
         },
-        body: {
-            model: "gpt-3.5-turbo",
-        }
+        body: JSON.stringify({requestBody})
     })
     .then((response) => console.log('This is the response: ',response.json()))
     .then((data) => console.log("This is the data: " ,data));
