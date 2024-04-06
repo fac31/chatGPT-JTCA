@@ -5,7 +5,7 @@ export function fetchKey(userInput){
     fetch("./config.json")
         .then((response) => response.json())
         .then((data) => API_KEY = data.OPEN_AI_KEY)
-        .then(() => { return callApi(userInput)})
+        .then(() => callApi(userInput))
         .catch((e) => console.log('error ', e));
 }
 
@@ -18,7 +18,7 @@ function callApi(userInput){
                 content: userInput
             }
         ],
-        max_tokens: 50
+        max_tokens: 500
     }
     fetch(API_URL,{   
         method: "POST",
@@ -40,4 +40,3 @@ function callApi(userInput){
 export function getAIReply(){
     return aiReply;
 }
-console.log(fetchKey("Tell me about yourself"));
