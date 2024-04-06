@@ -1,20 +1,20 @@
 const API_URL = "https://api.openai.com/v1/chat/completions";
 let API_KEY = "";
-function fetchKey(){
+export function fetchKey(userInput){
     fetch("./config.json")
         .then((response) => response.json())
         .then((data) => API_KEY = data.OPEN_AI_KEY)
-        .then(() => callApi())
+        .then(() => callApi(userInput))
         .catch((e) => console.log('error ', e));
 }
 
-function callApi(){
+function callApi(userInput){
     const requestBody = {
         model: "gpt-3.5-turbo",
         messages: [
             {
                 role: "user",
-                content: "Tell me about OpenAI"
+                content: userInput
             }
         ],
         max_tokens: 50
@@ -35,4 +35,3 @@ function callApi(){
     })
     .catch((error) => console.log('Error making api request: ', error ));
 }
-fetchKey();
