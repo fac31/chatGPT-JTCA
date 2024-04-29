@@ -9,7 +9,7 @@ export function fetchKey(userInput){
         .catch((e) => console.log('error ', e));
 }
 
-function callApi(userInput){
+export function callApi(userInput){
     const requestBody = {
         model: "gpt-3.5-turbo",
         messages: [
