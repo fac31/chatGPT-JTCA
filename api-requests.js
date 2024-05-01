@@ -5,13 +5,19 @@ let API_KEY = "";
 let aiReply = "";
 
 export function fetchKey(userInput) {
-  fetch("./config.json")
-    .then((response) => response.json())
-    .then((data) => {
-      API_KEY = data.OPEN_AI_KEY;
-    })
-    .then(() => callApi(userInput))
-    .catch((e) => console.log("error ", e));
+  return new Promise((resolve, reject) => {
+    fetch("./config.json")
+      .then((response) => response.json())
+      .then((data) => {
+        API_KEY = data.OPEN_AI_KEY;
+        return callApi(userInput);
+      })
+      .then(() => resolve())
+      .catch((e) => {
+        console.log("error ", e);
+        reject(e);
+      });
+  });
 }
 
 export function callApi(userInput) {
