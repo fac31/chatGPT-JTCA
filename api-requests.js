@@ -7,7 +7,9 @@ let aiReply = "";
 export function fetchKey(userInput) {
   fetch("./config.json")
     .then((response) => response.json())
-    .then((data) => (API_KEY = data.OPEN_AI_KEY))
+    .then((data) => {
+      API_KEY = data.OPEN_AI_KEY;
+    })
     .then(() => callApi(userInput))
     .catch((e) => console.log("error ", e));
 }
@@ -42,6 +44,7 @@ export function callApi(userInput) {
     })
     .catch((error) => console.log("Error making api request: ", error));
 }
+
 export function getAIReply() {
   return aiReply;
 }

@@ -10,7 +10,6 @@ async function formSubmit() {
   question.innerHTML = userInput;
   console.log(getAIReply());
   answer.innerHTML = getAIReply().choices[0].message.content;
-  //console.log("stringSubmitted");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
