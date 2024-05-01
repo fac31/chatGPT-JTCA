@@ -21,34 +21,35 @@ export function fetchKey(userInput) {
 }
 
 export function callApi(userInput) {
-  const requestBody = {
-    model: "gpt-3.5-turbo",
-    messages: [
-      {
-        role: "user",
-        content: userInput,
+  return new Promise((resolve, reject) => {
+    const requestBody = {
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: userInput }],
+      max_tokens: 500,
+    };
+    fetch(API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": "application/json",
       },
-    ],
-    max_tokens: 500,
-  };
-  fetch(API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${API_KEY}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(requestBody),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response not ok: " + response.statusText);
-      }
-      return response.json();
+      body: JSON.stringify(requestBody),
     })
-    .then((data) => {
-      aiReply = data;
-    })
-    .catch((error) => console.log("Error making api request: ", error));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        aiReply = data;
+        resolve(data); // Resolve the promise with the data
+      })
+      .catch((error) => {
+        console.log("Error making API request:", error);
+        reject(error); // Reject the promise if there's an error
+      });
+  });
 }
 
 export function getAIReply() {
