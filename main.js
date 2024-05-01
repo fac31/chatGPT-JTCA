@@ -1,6 +1,9 @@
-import { fetchKey,getAIReply } from "./api-requests.js";
+import { fetchKey, getAIReply } from "./api-requests.js";
+
 const answer = document.getElementById("answer");
+
 const question = document.getElementById("question");
+
 async function formSubmit() {
   const userInput = document.getElementById("input").value;
   fetchKey(userInput);
