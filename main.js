@@ -1,15 +1,18 @@
-import { fetchKey,getAIReply } from "./api-requests.js";
-
+import { callApi } from "./api-requests.js";
 const answer = document.getElementById("answer");
 const question = document.getElementById("question");
 
 async function formSubmit() {
-  const userInput = document.getElementById("input").value;
-  fetchKey(userInput);
-  question.innerHTML = userInput;
-  console.log(getAIReply());
-  answer.innerHTML = getAIReply().choices[0].message.content;
   console.log("stringSubmitted");
+
+  const userInput = document.getElementById("input").value;
+  question.innerHTML = userInput;
+
+  callApi(userInput)
+  .then(response => {
+      answer.innerHTML = response.choices[0].message.content;
+  });
+  userInput = "";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
