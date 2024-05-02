@@ -2,7 +2,7 @@ const API_URL = "https://api.openai.com/v1/chat/completions";
 let API_KEY = "";
 let aiReply = "";
 export function fetchKey(userInput){
-    fetch("./config.json")
+    fetch(".env")
         .then((response) => response.json())
         .then((data) => API_KEY = data.OPEN_AI_KEY)
         .then(() => callApi(userInput))
