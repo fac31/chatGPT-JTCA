@@ -28,9 +28,10 @@ async function formSubmit(e) {
   userInput = "";
 }
 
-//document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("submit").addEventListener("click", formSubmit);
-//});
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".form").addEventListener("submit", formSubmit);
+  //document.querySelector("submit").addEventListener("click", formSubmit);
+});
 
 
 
