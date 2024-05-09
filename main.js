@@ -2,48 +2,59 @@ import { callApi } from "./api-requests.js";
 const answer = document.getElementById("answer");
 const question = document.getElementById("question");
 let questionList = document.querySelector(".questionList")
+let userInput = document.getElementById("input");
 
 async function formSubmit(e) {
-  e.preventDefault();
+  e.preventDefault()
   console.log("stringSubmitted");
 
-  const userInput = document.getElementById("input").value;
-  question.innerHTML = userInput;
-
-  callApi(userInput)
+  callApi(userInput.value)
   .then(response => {
+  
+    console.log('userInput inside call', userInput.value)
+
     let listItem = document.createElement("li")
     listItem.classList = 'historicItem'
 
-    let newQuestion = document.createElement("p")
-    listItem.classList
-      answer.innerHTML = response.choices[0].message.content;
+    let newQuestion = document.createElement('p')
+    newQuestion.classList = 'newQuestion'
+    newQuestion.innerHTML = userInput.value
+    userInput.value = "";
+
+    let newAnswer = document.createElement('p')
+    newAnswer.classList = 'newAnswer'
+    newAnswer.innerHTML = response.choices[0].message.content;
+
+    listItem.appendChild(newQuestion)
+    listItem.appendChild(newAnswer)
+    questionList.prepend(listItem)
+
   });
-  userInput = "";
+  
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("submit").addEventListener("click", formSubmit);
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".form").addEventListener("submit", formSubmit);
+});
 
 
 
-//************ testing library ***************//
+// //************ testing library ***************//
 
-/* Ways we can test our bot that I have thought of: 
+// /* Ways we can test our bot that I have thought of: 
 
-- Check if response given is legible and useful (DONE)
-- Check if we can get a sound reply which is directly related to what we say (Ping-Pong) (DONE)
-- If the hardcode preventing it from giving out harmful or illegal information is working (DONE)
-- Test the user interface
-- See if the AI's response is longer than the amount of characters it is allowed to reply back with
-- ChatGPT keys cannot give real-time info from Jan 2022 onwards
-- Performance testing - How long does it take to reply (thinking time) */
+// - Check if response given is legible and useful (DONE)
+// - Check if we can get a sound reply which is directly related to what we say (Ping-Pong) (DONE)
+// - If the hardcode preventing it from giving out harmful or illegal information is working (DONE)
+// - Test the user interface
+// - See if the AI's response is longer than the amount of characters it is allowed to reply back with
+// - ChatGPT keys cannot give real-time info from Jan 2022 onwards
+// - Performance testing - How long does it take to reply (thinking time) */
 
-/* This is the most simple JavaScript test. I am going to create a command line function so that we can use it. 
-It calls the command function of Ping and then checks that the result is what you expect (Pong).*/
+// /* This is the most simple JavaScript test. I am going to create a command line function so that we can use it. 
+// It calls the command function of Ping and then checks that the result is what you expect (Pong).*/
 
-//Assigning a command
+// //Assigning a command
 // client.once("ready", async () => {
 
 //   if (guild) { // Not sure on what the guild equivalent is for our bot - Would you be able to help me on this?
@@ -108,4 +119,4 @@ It calls the command function of Ping and then checks that the result is what yo
 
 // notEqual(result, expectedResponse, "Bot should not provide illegal information");
 
-//********** new test
+// //********** new test
