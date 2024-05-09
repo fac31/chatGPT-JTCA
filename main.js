@@ -17,7 +17,7 @@ async function formSubmit(e) {
 
     let newQuestion = document.createElement("p")
     newQuestion.classList = 'newQuestion'
-    newQuestion.innerHTML = userInput.value
+    newQuestion.innerHTML = userInput
 
     let newAnswer = document.createElement('p')
     newAnswer.classList = 'newAnswer'
