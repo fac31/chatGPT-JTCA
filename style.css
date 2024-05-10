@@ -1,5 +1,5 @@
 header {
-    background-color: #1e8929;
+    background-color: #346f3a;
     color: #515151;
     padding: 10px;
     text-align: center;
@@ -17,9 +17,9 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(''); /*Add a URL here */ 
+    background-image: url('file.png'); /*Add a URL here */ 
     pointer-events: none; 
-    opacity: 0.1; /* Adjust opacity as needed */
+    opacity: 0.7; /* Adjust opacity as needed */
 }
 
 body {

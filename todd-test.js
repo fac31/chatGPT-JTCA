@@ -8,7 +8,7 @@ test("user input type appears as a string", () => {
     equal(typeof userInput.value, 'string')
 })
 
-// test button and enter both submit a user's input
+// test button and enter key both submit a user's input
 /* split into 2 parts:
 First that they are both equal to each other,
 Second, test that the submit button works. 
@@ -22,8 +22,8 @@ test("enter key and submit button are both equal to one another", () => {
     equal(submitButton === myForm)
 })
 
-//test 2
-// test("submit button works, hence enter key does too as ", () => {
-//     let submitButton = document.getElementById('submit')
-//     equal(submitButton === myForm)
-// })
+// test 2
+test("submit button works, hence enter key does too as ", () => {
+    let submitButton = document.getElementById('submit')
+    equal(submitButton === myForm)
+})
