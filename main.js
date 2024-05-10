@@ -37,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".form").addEventListener("submit", formSubmit);
 });
 
-
-
 // //************ testing library ***************//
 
 // /* Ways we can test our bot that I have thought of: 

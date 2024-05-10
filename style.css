@@ -1,8 +1,32 @@
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #1e8929;
+    color: #515151;
     padding: 10px;
     text-align: center;
+}
+
+h1 {
+    font-family: monospace;  
+    height: 25px;
+    padding: 15px;
+}
+
+.grain-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(''); /*Add a URL here */ 
+    pointer-events: none; 
+    opacity: 0.1; /* Adjust opacity as needed */
+}
+
+body {
+    margin: 50px;
+    text-align: center;
+    background-color: #8D918D; /* Set background color */
+    font-family: monospace;
 }
 
 .container {
@@ -12,6 +36,10 @@ header {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit:hover {
+    background-color: #5b5b5b;
 }
 
 footer {
