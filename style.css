@@ -1,53 +1,64 @@
 header {
     background-color: #346f3a;
-    color: #515151;
-    padding: 10px;
+    color: #fff;
+    padding: 20px;
     text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px;
+    
 }
 
+/* 
+center boxes in the middle of webpage,
+change hovered submit button to stay the same shape
+place history chat in containers. */
+
 h1 {
-    font-family: monospace;  
+    font-family: sans-serif;  
     height: 25px;
     padding: 15px;
 }
 
-.grain-overlay {
+.leaf-background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    background-image: url('file.png'); /*Add a URL here */ 
-    pointer-events: none; 
-    opacity: 0.7; /* Adjust opacity as needed */
+    background-image: url('file.png');
+    opacity: 0.95; 
 }
 
 body {
-    margin: 50px;
     text-align: center;
-    background-color: #8D918D; /* Set background color */
-    font-family: monospace;
+    background-color: #333;
+    font-family: sans-serif;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 60%;
+    margin-top: 50px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.input {
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .submit:hover {
-    background-color: #5b5b5b;
+    background-color: #333;
+    margin-top: 50px;
+    /* Change button to when hovered over it doesn't change shape */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-top: 50px;
 }
