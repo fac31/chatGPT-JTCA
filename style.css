@@ -4,10 +4,8 @@ header {
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    max-width: 100%;
-    margin-top: 50px; 
-    margin-left: 120px;
-    
+    max-width: 100%;  
+    margin: center;  
 }
 
 h1 {
@@ -28,6 +26,7 @@ body {
     text-align: center;
     background-color: #333;
     font-family: sans-serif;
+    
 }
 
 .container {
@@ -36,9 +35,8 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
-
     text-align: center;
-    margin-left: 300px;
+    margin: center;
 }
 
 .input {
@@ -46,27 +44,9 @@ body {
     margin-top: 50px;
 }
 
-/* .submit:hover {
-    background-color: #333;
-    margin-top: 50px;
-} */
-
-
 .history .questionList {
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
-    background-color: #346f3a;
-    color: #fff;
-    /* padding: 20px; */
-    text-align: center;
-    border-radius: 20px;
-    max-width: 100%;
-    margin-top: 50px; 
-    margin-left: 120px;
-}
-
-.history .questionList li {
-    margin-bottom: 10px; /* Add some spacing between list items */
+    list-style: none;
+    padding: 0; 
     background-color: #346f3a;
     color: #fff;
     padding: 20px;
@@ -74,7 +54,17 @@ body {
     border-radius: 20px;
     max-width: 100%;
     margin-top: 50px; 
-    margin-left: 120px;
+}
+
+.history .questionList li {
+    margin-bottom: 10px; 
+    background-color: #346f3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
 }
 
 .history .questionList li div {
@@ -96,5 +86,5 @@ footer {
     max-width: 100%;
     border-radius: 20px;
     margin-top: 50px;
-    margin-left: 100px;
+    margin: center;
 }
