@@ -19,6 +19,10 @@ h1 {
     padding: 15px;
 }
 
+h2 {
+    padding: 30px;
+}
+
 .leaf-background {
     position: absolute;
     width: 90%;
