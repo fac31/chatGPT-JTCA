@@ -10,9 +10,6 @@ header {
     
 }
 
-/* 
-place history chat in containers. */
-
 h1 {
     font-family: sans-serif;  
     height: 25px;
@@ -54,6 +51,43 @@ body {
     margin-top: 50px;
 } */
 
+
+.history .questionList {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    background-color: #346f3a;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
+    margin-left: 120px;
+}
+
+.history .questionList li {
+    margin-bottom: 10px; /* Add some spacing between list items */
+    background-color: #346f3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
+    margin-left: 120px;
+}
+
+.history .questionList li div {
+    background-color: #346f3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
+    margin-left: 120px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -62,6 +96,5 @@ footer {
     max-width: 100%;
     border-radius: 20px;
     margin-top: 50px;
-
     margin-left: 100px;
 }
