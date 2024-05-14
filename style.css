@@ -1,11 +1,16 @@
+html {
+    width: 100%;
+
+}
+
 header {
     background-color: #346f3a;
     color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    max-width: 100%;  
-    margin: center;  
+    max-width: 100%; 
+    margin-left: 10.5%;
 }
 
 h1 {
@@ -37,6 +42,11 @@ body {
     border-radius: 20px;
     text-align: center;
     margin: center;
+    margin-left: 24%;
+}
+
+.form {
+    margin-left: 12%;
 }
 
 .input {
@@ -54,6 +64,7 @@ body {
     border-radius: 20px;
     max-width: 100%;
     margin-top: 50px; 
+    margin-left: 10.5%;
 }
 
 .history .questionList li {
@@ -87,4 +98,5 @@ footer {
     border-radius: 20px;
     margin-top: 50px;
     margin: center;
+    margin-left: 10.5%;
 }
