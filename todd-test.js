@@ -76,12 +76,12 @@ test("enter key sends content to bot", () => {
 
 // //************ testing library ***************//
 
-// /* Ways we can test our bot that I have thought of: 
+/* Ways we can test our bot that I have thought of: 
 
-// - Check if response given is legible and useful (DONE)
-// - Check if we can get a sound reply which is directly related to what we say (Ping-Pong) (DONE)
-// - If the hardcode preventing it from giving out harmful or illegal information is working (DONE)
-// - Test the user interface
-// - See if the AI's response is longer than the amount of characters it is allowed to reply back with
-// - ChatGPT keys cannot give real-time info from Jan 2022 onwards
-// - Performance testing - How long does it take to reply (thinking time) */
+- Check if response given is legible and useful (DONE)
+- Check if we can get a sound reply which is directly related to what we say (Ping-Pong) (DONE)
+- If the hardcode preventing it from giving out harmful or illegal information is working (DONE)
+- Test the user interface
+- See if the AI's response is longer than the amount of characters it is allowed to reply back with
+- ChatGPT keys cannot give real-time info from Jan 2022 onwards
+- Performance testing - How long does it take to reply (thinking time) */
