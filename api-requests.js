@@ -1,15 +1,7 @@
 const API_URL = "https://api.openai.com/v1/chat/completions";
-let API_KEY = "";
-let aiReply = "";
-export function fetchKey(userInput){
-    fetch("./config.json")
-        .then((response) => response.json())
-        .then((data) => API_KEY = data.OPEN_AI_KEY)
-        .then(() => callApi(userInput))
-        .catch((e) => console.log('error ', e));
-}
+import {OPEN_AI_KEY} from "./config.js"
 
-function callApi(userInput){
+export function callApi(userInput){
     const requestBody = {
         model: "gpt-3.5-turbo",
         messages: [
@@ -20,10 +12,10 @@ function callApi(userInput){
         ],
         max_tokens: 500
     }
-    fetch(API_URL,{   
+    return fetch(API_URL,{   
         method: "POST",
         headers: {
-            Authorization: `Bearer ${API_KEY}`,
+            Authorization: `Bearer ${OPEN_AI_KEY}`,
             'content-type': 'application/json',
         },
         body: JSON.stringify(requestBody)
@@ -34,9 +26,10 @@ function callApi(userInput){
         }
         return response.json();
     })
-    .then((data) => { aiReply = data})
+    .then((data) => { 
+        console.log('AI reply: ', data)
+        return data
+        // aiReply = data
+    })
     .catch((error) => console.log('Error making api request: ', error ));
-}
-export function getAIReply(){
-    return aiReply;
 }

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Webpage</title>
     <style></style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   </head>
-  <body>
-    <header>
-      <h1>Welcome to FAC Chat</h1>
+
+  <body class = 'leaf-background'>
+    <header class="general-container">
+      <div class="general-content">
+        <h1>Welcome to FAC Chat! <br>
+            Where seedy 2003 website is the aesthetic.</h1>
+        <h2>Don't be shy, ask anything!</h2>
+        <p>Well, ideally not 'anything' - That would be inappropriate; those 3 wacky digits on the back of my <br>
+        debit card, what I'm wearing, etc. is quite frankly a little below the belt.</p>
+      </div>
     </header>
 
     <div class="container">
@@ -21,16 +25,26 @@
     </div>
     <p id = "question"></p>
     <p id = "answer"></p>
-    <form>
-      <input type="text" id="input" />
-      <button type="button" id="submit">
+    <form class ="form" id='myForm'>
+      <input type="text" id="input" class="input"/>
+      <button type="submit" id="submit" class="submit">
         <span class="material-symbols-rounded"> send </span>
       </button>
     </form>
+
+    <!-- section holding history of questions and answers  -->
+    <section class ='history'>
+      <ul class = 'questionList'>
+      
+      </ul>
+    </section>
+
     <footer>&copy; 2024 My Webpage</footer>
+    
     <script src="main.js" type="module"></script>
     <script defer src="api-requests.js" type="module"></script>
     <script defer src="test-helpers.js" type="module"></script>
-    <script defer src="tests.js" type="module"></script>
+    <script defer src="todd-test.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
   </body>
 </html>
