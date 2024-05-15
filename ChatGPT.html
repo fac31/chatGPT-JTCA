@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Webpage</title>
     <style></style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   </head>
   <body>
     <header>
@@ -21,9 +18,15 @@
     </div>
     <p id = "question"></p>
     <p id = "answer"></p>
+<<<<<<< HEAD
     <form class ="form" method="GET">
       <input type="text" id="input" />
       <button type="submit" id="submit">
+=======
+    <form class ="form" id='myForm'>
+      <input type="text" id="input" class="input"/>
+      <button type="submit" id="submit" class="submit">
+>>>>>>> main
         <span class="material-symbols-rounded"> send </span>
       </button>
     </form>
@@ -31,12 +34,12 @@
     <!-- section holding history of questions and answers  -->
     <section class ='history'>
       <ul class = 'questionList'>
-
+      
       </ul>
     </section>
-        
 
     <footer>&copy; 2024 My Webpage</footer>
+    
     <script src="main.js" type="module"></script>
     <script defer src="api-requests.js" type="module"></script>
     <script defer src="./testing/index.test.js" type="module"></script>

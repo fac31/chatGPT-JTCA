@@ -1,25 +1,106 @@
+html {
+    width: 100%;
+
+}
+
 header {
-    background-color: #333;
+    background-color: #346f3a;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    border-radius: 20px;
+    max-width: 100%; 
+    margin-left: 10.5%;
+}
+
+h1 {
+    font-family: sans-serif;  
+    height: 25px;
+    padding: 15px;
+}
+
+h2 {
+    padding: 30px;
+}
+
+.leaf-background {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background-image: url('file.png');
+    opacity: 0.95; 
+}
+
+body {
+    text-align: center;
+    background-color: #333;
+    font-family: sans-serif;
+    
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 60%;
+    margin-top: 50px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    margin: center;
+    margin-left: 24%;
+}
+
+.form {
+    margin-left: 12%;
+}
+
+.input {
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.history .questionList {
+    list-style: none;
+    padding: 0; 
+    background-color: #346f3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
+    margin-left: 10.5%;
+}
+
+.history .questionList li {
+    margin-bottom: 10px; 
+    background-color: #346f3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
+}
+
+.history .questionList li div {
+    background-color: #346f3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+    margin-top: 50px; 
+    margin-left: 120px;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin: center;
+    margin-left: 10.5%;
 }
