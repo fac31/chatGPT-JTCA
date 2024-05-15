@@ -1,47 +1,42 @@
 import { callApi } from "./api-requests.js";
 const answer = document.getElementById("answer");
 const question = document.getElementById("question");
-let questionList = document.querySelector(".questionList")
+let questionList = document.querySelector(".questionList");
 let userInput = document.getElementById("input");
 
-async function formSubmit(e) {
-  e.preventDefault()
+export default async function formSubmit(e) {
+  e.preventDefault();
   console.log("stringSubmitted");
 
-  callApi(userInput.value)
-  .then(response => {
-  
-    console.log('userInput inside call', userInput.value)
+  callApi(userInput.value).then((response) => {
+    // console.log("userInput inside call", userInput.value);
+    // console.log("main.js callApi response", response);
 
-    let listItem = document.createElement("li")
-    listItem.classList = 'historicItem'
+    let listItem = document.createElement("li");
+    listItem.classList = "historicItem";
 
-    let newQuestion = document.createElement('p')
-    newQuestion.classList = 'newQuestion'
-    newQuestion.innerHTML = userInput.value
+    let newQuestion = document.createElement("p");
+    newQuestion.classList = "newQuestion";
+    newQuestion.innerHTML = userInput.value;
     userInput.value = "";
 
-    let newAnswer = document.createElement('p')
-    newAnswer.classList = 'newAnswer'
+    let newAnswer = document.createElement("p");
+    newAnswer.classList = "newAnswer";
     newAnswer.innerHTML = response.choices[0].message.content;
 
-    listItem.appendChild(newQuestion)
-    listItem.appendChild(newAnswer)
-    questionList.prepend(listItem)
-
+    listItem.appendChild(newQuestion);
+    listItem.appendChild(newAnswer);
+    questionList.prepend(listItem);
   });
-  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".form").addEventListener("submit", formSubmit);
 });
 
-
-
 // //************ testing library ***************//
 
-// /* Ways we can test our bot that I have thought of: 
+// /* Ways we can test our bot that I have thought of:
 
 // - Check if response given is legible and useful (DONE)
 // - Check if we can get a sound reply which is directly related to what we say (Ping-Pong) (DONE)
@@ -51,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // - ChatGPT keys cannot give real-time info from Jan 2022 onwards
 // - Performance testing - How long does it take to reply (thinking time) */
 
-// /* This is the most simple JavaScript test. I am going to create a command line function so that we can use it. 
+// /* This is the most simple JavaScript test. I am going to create a command line function so that we can use it.
 // It calls the command function of Ping and then checks that the result is what you expect (Pong).*/
 
 // //Assigning a command
