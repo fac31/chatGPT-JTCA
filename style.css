@@ -1,5 +1,10 @@
-html {
-    width: 100%;
+/* html {} */
+
+body {
+    text-align: center;
+    background-color: #333;
+    font-family: sans-serif;
+    margin: 3rem;
 
 }
 
@@ -9,88 +14,95 @@ header {
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    max-width: 100%; 
-    margin-left: 10.5%;
 }
 
 h1 {
-    font-family: sans-serif;  
-    height: 25px;
+    font-family: sans-serif;
     padding: 15px;
 }
 
-h2 {
+.container h2 {
     padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    max-width: 80%;
+    margin: auto;
 }
 
 .leaf-background {
     position: absolute;
     width: 90%;
     height: 100%;
-    background-image: url('file.png');
-    opacity: 0.95; 
-}
-
-body {
-    text-align: center;
-    background-color: #333;
-    font-family: sans-serif;
-    
+    opacity: 0.95;
 }
 
 .container {
-    max-width: 60%;
     margin-top: 50px;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
     text-align: center;
-    margin: center;
-    margin-left: 24%;
 }
 
-.form {
-    margin-left: 12%;
+.myForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .input {
-    border-radius: 20px;
-    margin-top: 50px;
+    margin: 50px;
+    margin-right: 20px;
+    width: 60%;
+    height: 50px;
 }
 
 .history .questionList {
     list-style: none;
-    padding: 0; 
+    padding: 0;
     background-color: #346f3a;
     color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    max-width: 100%;
-    margin-top: 50px; 
-    margin-left: 10.5%;
+
 }
 
-.history .questionList li {
-    margin-bottom: 10px; 
+.questionList li {
     background-color: #346f3a;
     color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     max-width: 100%;
-    margin-top: 50px; 
+    line-height: 1.5rem;
+    font-size: 1.2rem;
 }
 
-.history .questionList li div {
+.questionList p::first-letter {
+    text-transform: capitalize;
+
+}
+
+.questionList li:not(:first-child) {
+    margin-top: 40px;
+}
+
+/* .questionList li div {
     background-color: #346f3a;
     color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     max-width: 100%;
-    margin-top: 50px; 
+    margin-top: 50px;
     margin-left: 120px;
+} */
+
+.history {
+    display: none;
+}
+
+.questionList {
+    background-image: url('./file.png');
 }
 
 footer {

@@ -3,6 +3,7 @@ const answer = document.getElementById("answer");
 const question = document.getElementById("question");
 let questionList = document.querySelector(".questionList");
 let userInput = document.getElementById("input");
+let history = document.querySelector(".history")
 
 export default async function formSubmit(e) {
   e.preventDefault();
@@ -27,6 +28,7 @@ export default async function formSubmit(e) {
     listItem.appendChild(newQuestion);
     listItem.appendChild(newAnswer);
     questionList.prepend(listItem);
+    history.style.display = "flex"
   });
 }
 

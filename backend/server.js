@@ -7,6 +7,7 @@ import { OPEN_AI_KEY } from './config.js';
 const app = express();
 const API_URL = "https://api.openai.com/v1/chat/completions";
 
+// Middleware
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
